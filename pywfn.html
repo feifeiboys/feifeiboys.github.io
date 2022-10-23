@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <title>pywfn</title>
+</head>
+
+<body>
+    <h1>pywfn</h1>
+    <p>python基于python的波函数分析工具包</p>
+    <p>程序中有很大一部分属于python程序,为了避免重复下载所以将其单独抽出</p>
+    <button onclick="save()">下载</button>
+
+</body>
+<script>
+    function save(){
+        axios.get('https://vkceyugu.cdn.bspapp.com/VKCEYUGU-f551f9c1-1083-4ceb-8724-fb1c75629b6f/b8c9ff0b-5ff9-42b5-8398-fb8d1704491a.zip')
+        .then(res=>{
+            console.log(res.data)
+            let linkElement = document.createElement('a');//创建点击下载的元素
+            let blob = new Blob([res.dat] , {type:"zip"});
+            let url = window.URL.createObjectURL(blob);
+            linkElement.setAttribute('href',url);
+            linkElement.setAttribute('downLoad','pywfn.zip');
+            linkElement.click();
+        })
+    }
+
+    
+</script>
+
+</html>
