@@ -5,33 +5,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <title>pywfn</title>
 </head>
 
 <body>
     <h1>pywfn</h1>
     <p>python基于python的波函数分析工具包</p>
-    <p>程序中有很大一部分属于python程序,为了避免重复下载所以将其单独抽出</p>
-    <button onclick="save()">下载</button>
-    <a href="./files/pywfn.zip">pywfn.zip</a>
+    <a href="./files/pywfn.zip">点击下载</a>
+    <p>
+        下载完成后,解压到pywfn文件夹,然后点击运行pywfn.exe即可,下载到的其实是一个下载器,首次启动时会下载一些必要的资源,
+        而且每次启动都会检测更新并下载。
+    </p>
+    <h2>主要功能介绍:</h2>
+    <p>注意: </p>
+    <h3>1. 计算键级</h3>
+    <h3>2. 原子属性</h3>
+    <h3>3. 常用功能</h3>
+
 
 </body>
-<script>
-    function save(){
-        axios.get('https://vkceyugu.cdn.bspapp.com/VKCEYUGU-f551f9c1-1083-4ceb-8724-fb1c75629b6f/b8c9ff0b-5ff9-42b5-8398-fb8d1704491a.zip')
-        .then(res=>{
-            console.log(res.data)
-            let linkElement = document.createElement('a');//创建点击下载的元素
-            let blob = new Blob([res.dat] , {type:"zip"});
-            let url = window.URL.createObjectURL(blob);
-            linkElement.setAttribute('href',url);
-            linkElement.setAttribute('downLoad','pywfn.zip');
-            linkElement.click();
-        })
-    }
-
-    
-</script>
 
 </html>
