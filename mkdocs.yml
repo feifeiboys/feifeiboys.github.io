@@ -1,0 +1,8 @@
+site_name: 小飞的博客
+site_author: feifeiboy
+nav:
+  - Home: index.md
+  - Pywfn: pywfn.md
+  - Math: math.md
+theme:
+  name: material
