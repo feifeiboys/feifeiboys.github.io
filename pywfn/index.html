@@ -234,6 +234,21 @@
   
 
     
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../python/" class="md-nav__link">
+        Python
+      </a>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -300,6 +315,63 @@
 <li>导出SI文件</li>
 <li>批量生成gjf文件</li>
 </ul>
+<h2 id="mayer">mayer键级的拆分</h2>
+<p>密度矩阵的公式为
+$$
+P_{\mu \nu }=\eta_i \sum <em>{i}C</em>{\mu i}C_{\nu i}
+$$
+可以看出总的密度矩阵是每一个分子轨道对应的密度矩阵之和，即：
+$$
+P=\sum <em>{i}P_i
+$$
+键级的公式为：
+$$
+P</em>{ab}=|\sum_{a \in A}\sum_{b \in B}(PS)<em>{ab}(PS)</em>{ba}|^{1/2}
+$$
+这是一个双重求和，可以以矩阵运算的形式表示（方便计算机运算）：
+$$
+P_{ab}=sum[(PS)<em>{ab}\times (PS)</em>{ba}]
+$$
+假设现在只有一个原子，并且这个原子有三个轨道，那么
+$$
+PS=(P_1+P_2+P_3)@S
+$$
+$$
+P_{ab}=PS^2=[(P_1+P_2+P_3)@S]^2=(P_1+P_2+P_3)^2@S^2
+$$
+累加的平方可以用矩阵形式来表达：</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th><span class="arithmatex">\(P_1\)</span></th>
+<th><span class="arithmatex">\(P_2\)</span></th>
+<th><span class="arithmatex">\(P_3\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="arithmatex">\(P_1\)</span></td>
+<td><span class="arithmatex">\(P_{1}P_{1}\)</span></td>
+<td><span class="arithmatex">\(P_{1}P_{2}\)</span></td>
+<td><span class="arithmatex">\(P_{1}P_{3}\)</span></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(P_2\)</span></td>
+<td><span class="arithmatex">\(P_{2}P_{1}\)</span></td>
+<td><span class="arithmatex">\(P_{2}P_{2}\)</span></td>
+<td><span class="arithmatex">\(P_{2}P_{3}\)</span></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(P_3\)</span></td>
+<td><span class="arithmatex">\(P_{3}P_{1}\)</span></td>
+<td><span class="arithmatex">\(P_{3}P_{2}\)</span></td>
+<td><span class="arithmatex">\(P_{3}P_{3}\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>其中的每一项再乘上重叠矩阵的平法即为键级矩阵，其大小与分子轨道数量一致，也是一个对称矩阵，对其行或列求和可得每一个分子轨道的键级，对于多原子和多轨道可用相似的方法，详情可查看源代码</p>
+<p>这样就把Mayer键级中的每一个分子轨道键级都拆出来啦哈哈哈 &gt;_&lt;</p>
 
 
 
