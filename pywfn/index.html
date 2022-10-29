@@ -15,7 +15,7 @@
     
     
       
-        <title>Pywfn - 小飞的博客</title>
+        <title>介绍 - 小飞的博客</title>
       
     
     
@@ -101,7 +101,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Pywfn
+              介绍
             
           </span>
         </div>
@@ -200,31 +200,6 @@
 
   
   
-    
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        Pywfn
-      </a>
-      
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
   
     <li class="md-nav__item">
       <a href="../math/" class="md-nav__link">
@@ -245,6 +220,80 @@
       <a href="../python/" class="md-nav__link">
         Python
       </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Pywfn
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Pywfn" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Pywfn
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        介绍
+      </a>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="%E7%AE%97%E6%B3%95/" class="md-nav__link">
+        算法
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -315,63 +364,6 @@
 <li>导出SI文件</li>
 <li>批量生成gjf文件</li>
 </ul>
-<h2 id="mayer">mayer键级的拆分</h2>
-<p>密度矩阵的公式为</p>
-<div class="arithmatex">\[
-P_{\mu \nu }=\eta_i \sum _{i}C_{\mu i}C_{\nu i}
-\]</div>
-<p>可以看出总的密度矩阵是每一个分子轨道对应的密度矩阵之和，即：</p>
-<div class="arithmatex">\[
-P=\sum _{i}P_i
-\]</div>
-<p>键级的公式为：</p>
-<div class="arithmatex">\[
-P_{ab}=|\sum_{a \in A}\sum_{b \in B}(PS)_{ab}(PS)_{ba}|^{1/2}
-\]</div>
-<p>这是一个双重求和，可以以矩阵运算的形式表示（方便计算机运算）：</p>
-<div class="arithmatex">\[
-P_{ab}=sum[(PS)_{ab}\times (PS)_{ba}]
-\]</div>
-<p>假设现在只有一个原子，并且这个原子有三个轨道，那么</p>
-<div class="arithmatex">\[
-PS=(P_1+P_2+P_3)@S
-\]</div>
-<div class="arithmatex">\[
-P_{ab}=(PS)^2=[(P_1+P_2+P_3)@S]^2=(P_1+P_2+P_3)^2@S^2
-\]</div>
-<p>累加的平方可以用矩阵形式来表达：</p>
-<table>
-<thead>
-<tr>
-<th></th>
-<th><span class="arithmatex">\(P_1\)</span></th>
-<th><span class="arithmatex">\(P_2\)</span></th>
-<th><span class="arithmatex">\(P_3\)</span></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><span class="arithmatex">\(P_1\)</span></td>
-<td><span class="arithmatex">\(P_{1}P_{1}\)</span></td>
-<td><span class="arithmatex">\(P_{1}P_{2}\)</span></td>
-<td><span class="arithmatex">\(P_{1}P_{3}\)</span></td>
-</tr>
-<tr>
-<td><span class="arithmatex">\(P_2\)</span></td>
-<td><span class="arithmatex">\(P_{2}P_{1}\)</span></td>
-<td><span class="arithmatex">\(P_{2}P_{2}\)</span></td>
-<td><span class="arithmatex">\(P_{2}P_{3}\)</span></td>
-</tr>
-<tr>
-<td><span class="arithmatex">\(P_3\)</span></td>
-<td><span class="arithmatex">\(P_{3}P_{1}\)</span></td>
-<td><span class="arithmatex">\(P_{3}P_{2}\)</span></td>
-<td><span class="arithmatex">\(P_{3}P_{3}\)</span></td>
-</tr>
-</tbody>
-</table>
-<p>其中的每一项再乘上重叠矩阵的平法即为键级矩阵，其大小与分子轨道数量一致，也是一个对称矩阵，对其行或列求和可得每一个分子轨道的键级，对于多原子和多轨道可用相似的方法，详情可查看源代码</p>
-<p>这样就把Mayer键级中的每一个分子轨道键级都拆出来啦哈哈哈 &gt;_&lt;</p>
 
 
 
@@ -392,7 +384,7 @@ P_{ab}=(PS)^2=[(P_1+P_2+P_3)@S]^2=(P_1+P_2+P_3)^2@S^2
     <nav class="md-footer__inner md-grid" aria-label="Footer" >
       
         
-        <a href=".." class="md-footer__link md-footer__link--prev" aria-label="Previous: Home" rel="prev">
+        <a href="../python/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Python" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -401,20 +393,20 @@ P_{ab}=(PS)^2=[(P_1+P_2+P_3)@S]^2=(P_1+P_2+P_3)^2@S^2
               <span class="md-footer__direction">
                 Previous
               </span>
-              Home
+              Python
             </div>
           </div>
         </a>
       
       
         
-        <a href="../math/" class="md-footer__link md-footer__link--next" aria-label="Next: Math" rel="next">
+        <a href="%E7%AE%97%E6%B3%95/" class="md-footer__link md-footer__link--next" aria-label="Next: 算法" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Math
+              算法
             </div>
           </div>
           <div class="md-footer__button md-icon">
