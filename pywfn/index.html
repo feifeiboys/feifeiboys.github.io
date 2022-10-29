@@ -316,30 +316,30 @@
 <li>批量生成gjf文件</li>
 </ul>
 <h2 id="mayer">mayer键级的拆分</h2>
-<p>密度矩阵的公式为
-$$
-P_{\mu \nu }=\eta_i \sum <em>{i}C</em>{\mu i}C_{\nu i}
-$$
-可以看出总的密度矩阵是每一个分子轨道对应的密度矩阵之和，即：
-$$
-P=\sum <em>{i}P_i
-$$
-键级的公式为：
-$$
-P</em>{ab}=|\sum_{a \in A}\sum_{b \in B}(PS)<em>{ab}(PS)</em>{ba}|^{1/2}
-$$
-这是一个双重求和，可以以矩阵运算的形式表示（方便计算机运算）：
-$$
-P_{ab}=sum[(PS)<em>{ab}\times (PS)</em>{ba}]
-$$
-假设现在只有一个原子，并且这个原子有三个轨道，那么
-$$
+<p>密度矩阵的公式为</p>
+<div class="arithmatex">\[
+P_{\mu \nu }=\eta_i \sum _{i}C_{\mu i}C_{\nu i}
+\]</div>
+<p>可以看出总的密度矩阵是每一个分子轨道对应的密度矩阵之和，即：</p>
+<div class="arithmatex">\[
+P=\sum _{i}P_i
+\]</div>
+<p>键级的公式为：</p>
+<div class="arithmatex">\[
+P_{ab}=|\sum_{a \in A}\sum_{b \in B}(PS)_{ab}(PS)_{ba}|^{1/2}
+\]</div>
+<p>这是一个双重求和，可以以矩阵运算的形式表示（方便计算机运算）：</p>
+<div class="arithmatex">\[
+P_{ab}=sum[(PS)_{ab}\times (PS)_{ba}]
+\]</div>
+<p>假设现在只有一个原子，并且这个原子有三个轨道，那么</p>
+<div class="arithmatex">\[
 PS=(P_1+P_2+P_3)@S
-$$
-$$
-P_{ab}=PS^2=[(P_1+P_2+P_3)@S]^2=(P_1+P_2+P_3)^2@S^2
-$$
-累加的平方可以用矩阵形式来表达：</p>
+\]</div>
+<div class="arithmatex">\[
+P_{ab}=(PS)^2=[(P_1+P_2+P_3)@S]^2=(P_1+P_2+P_3)^2@S^2
+\]</div>
+<p>累加的平方可以用矩阵形式来表达：</p>
 <table>
 <thead>
 <tr>
