@@ -1,8 +1,22 @@
 site_name: 小飞的博客
 site_author: feifeiboy
-nav:
-  - Home: index.md
-  - Pywfn: pywfn.md
-  - Math: math.md
+# nav:
+#   - Home: index.md
+#   - Pywfn:
+#     - 介绍: pywfn\index.md
+#     - 算法: pywfn\算法.md
+#   - Math: math.md
+#   - Python: python.md
 theme:
   name: material
+  palette:
+    primary: light blue
+
+markdown_extensions:
+  - pymdownx.arithmatex:
+      generic: true
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
