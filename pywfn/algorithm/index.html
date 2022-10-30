@@ -314,6 +314,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    矩阵乘法构建密度矩阵
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -358,6 +365,13 @@
         <li class="md-nav__item">
   <a href="#mayer" class="md-nav__link">
     mayer键级的拆分
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    矩阵乘法构建密度矩阵
   </a>
   
 </li>
@@ -435,6 +449,27 @@ P_{ab}=(PS)^2=[(P_1+P_2+P_3)@S]^2=(P_1+P_2+P_3)^2@S^2
 </table>
 <p>其中的每一项再乘上重叠矩阵的平法即为键级矩阵，其大小与分子轨道数量一致，也是一个对称矩阵，对其行或列求和可得每一个分子轨道的键级，对于多原子和多轨道可用相似的方法，详情可查看源代码</p>
 <p>这样就把Mayer键级中的每一个分子轨道键级都拆出来啦哈哈哈 &gt;_&lt;</p>
+<h2 id="_2">矩阵乘法构建密度矩阵</h2>
+<p>密度矩阵的公式为：</p>
+<div class="arithmatex">\[
+P_{\mu \nu }=\eta_i \sum _{i}C_{\mu i}C_{\nu i}
+\]</div>
+<p>原来的计算方法很形象，即为逐元素构建矩阵元</p>
+<pre><code class="language-python">l,c=CM.shape
+PMs=np.zeros(shape=(c,l,l)) #[n,n,n] 三维矩阵，第0个维度是分子轨道的序数
+for j in range(c):
+    ci=CM[:,j].reshape(-1,1) #[n,1]
+    cj=CM[:,j].reshape(1,-1) #[1,n]
+    e=n[j]
+    PMs[j,:,:]=ci@cj*e
+</code></pre>
+<p>但是这种方法计算速度很慢，而现在我摸索出了用矩阵乘法计算的方式</p>
+<pre><code class="language-python">A=(CM.copy().T)[:,:,np.newaxis]
+B=(CM.copy().T)[:,np.newaxis,:]
+PMs=A@B
+</code></pre>
+<p>可以看出，形式非常简洁，相当于一个<code>[3,3,1]</code>的矩阵和一个<code>[3,1,3]</code>的矩阵相乘，三维矩阵的乘法本质上还是最后两个维度的矩阵相乘，再把结果堆叠在一起。</p>
+<p>经测试联苯，计算速度提升了有70倍！而且越是大的分子计算速度提升的越明显</p>
 
 
 
