@@ -10,19 +10,19 @@
         <meta name="author" content="feifeiboy">
       
       
-      <link rel="icon" href="../assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.1, mkdocs-material-8.5.7">
     
     
       
-        <title>Python - 小飞的博客</title>
+        <title>高斯型波函数 - 小飞的博客</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.20d9efc8.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.20d9efc8.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.cbb835fc.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.cbb835fc.min.css">
         
           
           
@@ -43,7 +43,7 @@
       
     
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -68,7 +68,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#python" class="md-skip">
+        <a href="#_1" class="md-skip">
           Skip to content
         </a>
       
@@ -82,7 +82,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="小飞的博客" class="md-header__button md-logo" aria-label="小飞的博客" data-md-component="logo">
+    <a href="../.." title="小飞的博客" class="md-header__button md-logo" aria-label="小飞的博客" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -101,7 +101,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Python
+              高斯型波函数
             
           </span>
         </div>
@@ -168,7 +168,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="小飞的博客" class="md-nav__button md-logo" aria-label="小飞的博客" data-md-component="logo">
+    <a href="../.." title="小飞的博客" class="md-nav__button md-logo" aria-label="小飞的博客" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -187,7 +187,7 @@
   
   
     <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         Home
       </a>
     </li>
@@ -202,7 +202,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../math/" class="md-nav__link">
+      <a href="../../math/" class="md-nav__link">
         Math
       </a>
     </li>
@@ -215,12 +215,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
       
       
       
@@ -241,11 +243,21 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../QChem/gto/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         高斯型波函数
       </a>
+      
     </li>
   
 
@@ -257,7 +269,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../QChem/%E9%87%8F%E5%8C%96%E7%AC%94%E8%AE%B0/" class="md-nav__link">
+      <a href="../%E9%87%8F%E5%8C%96%E7%AC%94%E8%AE%B0/" class="md-nav__link">
         量化笔记
       </a>
     </li>
@@ -277,14 +289,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
       
       
       
@@ -305,80 +315,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Python
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../python/" class="md-nav__link">
         Python
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    坑爹事
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#vscode" class="md-nav__link">
-    vscode颜色含义
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#lru_cache" class="md-nav__link">
-    lru_cache 数据缓存
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#python-embeddable-python" class="md-nav__link">
-    python embeddable 嵌入式python
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cython" class="md-nav__link">
-    cython
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -390,7 +331,7 @@
   
   
     <li class="md-nav__item">
-      <a href="draw/" class="md-nav__link">
+      <a href="../../python/draw/" class="md-nav__link">
         python 绘图
       </a>
     </li>
@@ -404,7 +345,7 @@
   
   
     <li class="md-nav__item">
-      <a href="mkdocs/" class="md-nav__link">
+      <a href="../../python/mkdocs/" class="md-nav__link">
         mkdocs的使用
       </a>
     </li>
@@ -452,7 +393,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../pywfn/" class="md-nav__link">
+      <a href="../../pywfn/" class="md-nav__link">
         介绍
       </a>
     </li>
@@ -466,7 +407,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../pywfn/algorithm/" class="md-nav__link">
+      <a href="../../pywfn/algorithm/" class="md-nav__link">
         算法
       </a>
     </li>
@@ -480,7 +421,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../pywfn/manager/" class="md-nav__link">
+      <a href="../../pywfn/manager/" class="md-nav__link">
         LogManager
       </a>
     </li>
@@ -528,7 +469,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/selfAttation/" class="md-nav__link">
+      <a href="../../%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/selfAttation/" class="md-nav__link">
         selfAttation
       </a>
     </li>
@@ -576,7 +517,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../%E8%AF%BB%E8%AE%BA%E6%96%87/" class="md-nav__link">
+      <a href="../../%E8%AF%BB%E8%AE%BA%E6%96%87/" class="md-nav__link">
         导航
       </a>
     </li>
@@ -590,7 +531,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../%E8%AF%BB%E8%AE%BA%E6%96%87/2022-11-2/" class="md-nav__link">
+      <a href="../../%E8%AF%BB%E8%AE%BA%E6%96%87/2022-11-2/" class="md-nav__link">
         2022-11-2
       </a>
     </li>
@@ -604,7 +545,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../%E8%AF%BB%E8%AE%BA%E6%96%87/2022-11-3/" class="md-nav__link">
+      <a href="../../%E8%AF%BB%E8%AE%BA%E6%96%87/2022-11-3/" class="md-nav__link">
         2022-11-3
       </a>
     </li>
@@ -638,49 +579,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    坑爹事
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#vscode" class="md-nav__link">
-    vscode颜色含义
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#lru_cache" class="md-nav__link">
-    lru_cache 数据缓存
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#python-embeddable-python" class="md-nav__link">
-    python embeddable 嵌入式python
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cython" class="md-nav__link">
-    cython
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -694,30 +592,92 @@
                   
 
 
-<h1 id="python">Python</h1>
-<blockquote>
-<p>记录一些常用python技术以及在学习中的笔记</p>
-</blockquote>
-<h2 id="_1">坑爹事</h2>
-<p>使用多线程传参时，<code>args=(p,)</code>，参数元组内一定要加一个逗号，今天在传参时传入了一个字符串，字符串中的每一个字符都被当成一个参数穿进去了，导致参数超了，太特么坑了</p>
-<h2 id="vscode">vscode颜色含义</h2>
-<p>在使用vscode进行python编程的时候，程序会根据代码中不同的类型来显示不同的颜色</p>
-<p>据我观察，在默认的黑色模式下
-|颜色|cn|en|
-|---|---|---|
-|蓝色|变量<br>属性<br>参数|variable<br>property<br>parameter|
-|黄色|函数<br>方法|function<br>method|
-|绿色|类|class|
-|紫色|保留字|-|
-|白色|任意|Any|</p>
-<h2 id="lru_cache">lru_cache 数据缓存</h2>
-<p>在python中，有时候需要频繁调用一个函数，而且传入的参数都一样，为了避免浪费计算时间，可以将相同的计算参数所得到的结果缓存起来，这样再次调用函数的时候可以直接返回缓存结果</p>
-<pre><code class="language-python">from functools import lru_cache,cached_property
+<h1 id="_1">高斯型波函数</h1>
+<p>高斯中的原子轨道波函数都是由很多个gto型函数线性组合而成的，gto的基本形式为:</p>
+<div class="arithmatex">\[
+c\left(\frac{2\alpha }{\pi}\right) ^{\frac{3}{4} }2\sqrt{\alpha }\ x^l y^m z^ne^{-\alpha R}
+\]</div>
+<p>其中：</p>
+<div class="arithmatex">\[
+R=(x^2+y^2+z^2)
+\]</div>
+<p><span class="arithmatex">\(c\)</span>和<span class="arithmatex">\(\alpha\)</span>是高斯函数的收缩系数和指数，不同基组下具有不同的数据，l,m,n是不同原子轨道的数据，如下表所示</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>l</th>
+<th>m</th>
+<th>n</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>s</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>px</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>py</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr>
+<td>pz</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p>现在以很常用碳原子的<code>6-31g(d)</code>基组为例</p>
+<p>其中6是指原子内层由6个gto组成,31是指价层劈裂成两组，其中一组由3个gto组成，一组由1个gto组成</p>
+<p>我们看一下在高斯输出文件中打印的碳原子的基组信息(关键词：gfinput)</p>
+<pre><code>      1 0
+ S   6 1.00       0.000000000000
+      0.3047524880D+04  0.1834737132D-02
+      0.4573695180D+03  0.1403732281D-01
+      0.1039486850D+03  0.6884262226D-01
+      0.2921015530D+02  0.2321844432D+00
+      0.9286662960D+01  0.4679413484D+00
+      0.3163926960D+01  0.3623119853D+00
+ SP   3 1.00       0.000000000000
+      0.7868272350D+01 -0.1193324198D+00  0.6899906659D-01
+      0.1881288540D+01 -0.1608541517D+00  0.3164239610D+00
+      0.5442492580D+00  0.1143456438D+01  0.7443082909D+00
+ SP   1 1.00       0.000000000000
+      0.1687144782D+00  0.1000000000D+01  0.1000000000D+01
+ D   1 1.00       0.000000000000
+      0.8000000000D+00  0.1000000000D+01
+ ****
 </code></pre>
-<p>其中<code>lru_cache</code>是用来装饰函数或类方法，<code>cached_property</code>是用来装饰类属性</p>
-<h2 id="python-embeddable-python">python embeddable 嵌入式python</h2>
-<p>当做好程序想给别人用时，打包是个麻烦事，因为打包之后的程序会很大，所以嵌入版本的python是一个好选择</p>
-<h2 id="cython">cython</h2>
+<p>第一个S指内层的六个got函数的高斯指数和收缩系数</p>
+<p>第二个SP指2S和2P是由3个gto函数组成，第一列是两者共有的高斯指数<span class="arithmatex">\(\alpha\)</span>，第二列是S轨道的收缩系数<span class="arithmatex">\(c\)</span>，第三列是P轨道的收缩系数<span class="arithmatex">\(c\)</span></p>
+<blockquote>
+<p>高斯指数代表高斯函数的高度，S和P两者公用高斯指数，它俩高度一样？为什么S和P要写在一块，难道是因为它俩都属于同一层？</p>
+</blockquote>
+<p>第三个SP指3S和3P是由1个gto函数组成</p>
+<blockquote>
+<p>虽然有2SP有三个系数，但对应的原子轨道组合系数只有一个，所以这三者的加和对应一个原子轨道，这个又叫做收缩型高斯函数</p>
+</blockquote>
+<p>可以看出6-31g(6)有六组(层)基组信息，而其每个原子的轨道为：</p>
+<pre><code>1S
+2S 2PX 2PY 2PZ
+3S 3PX 3PY 3PZ
+4XX 4YY 4ZZ 4XY 4XZ 4YZ
+</code></pre>
+<p>也是有四层，所以根据每层轨道最前面的数也能确定应该用哪一个基组信息</p>
+<blockquote>
+<p>D层轨道按道理来说形状应该比较复杂才对，但是为什么基组信息只有一行？</p>
+</blockquote>
 
 
 
@@ -738,7 +698,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer" >
       
         
-        <a href="../QChem/%E9%87%8F%E5%8C%96%E7%AC%94%E8%AE%B0/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 量化笔记" rel="prev">
+        <a href="../../math/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Math" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -747,20 +707,20 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              量化笔记
+              Math
             </div>
           </div>
         </a>
       
       
         
-        <a href="draw/" class="md-footer__link md-footer__link--next" aria-label="Next: python 绘图" rel="next">
+        <a href="../%E9%87%8F%E5%8C%96%E7%AC%94%E8%AE%B0/" class="md-footer__link md-footer__link--next" aria-label="Next: 量化笔记" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              python 绘图
+              量化笔记
             </div>
           </div>
           <div class="md-footer__button md-icon">
@@ -791,12 +751,12 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.8492ddcf.min.js"></script>
+      <script src="../../assets/javascripts/bundle.8492ddcf.min.js"></script>
       
-        <script src="../javascripts/mathjax.js"></script>
+        <script src="../../javascripts/mathjax.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       
