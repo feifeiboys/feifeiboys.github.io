@@ -68,7 +68,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#ssh" class="md-skip">
           Skip to content
         </a>
       
@@ -347,6 +347,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../pywfn/ideas/" class="md-nav__link">
+        Ideas
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../pywfn/manager/" class="md-nav__link">
         LogManager
       </a>
@@ -473,6 +487,20 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ssh" class="md-nav__link">
+    ssh传输文件
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gunicorn" class="md-nav__link">
+    gunicorn
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
@@ -700,6 +728,20 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#ssh" class="md-nav__link">
+    ssh传输文件
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gunicorn" class="md-nav__link">
+    gunicorn
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
     用户管理
   </a>
@@ -764,6 +806,20 @@
 
   <h1>Linux</h1>
 
+<h2 id="ssh">ssh传输文件</h2>
+<pre><code>scp 本地文件 用户名@ip:文件夹
+</code></pre>
+<h2 id="gunicorn">gunicorn</h2>
+<p>部署fastapi服务</p>
+<pre><code>gunicorn main:app -b 0.0.0.0:8000  -w 4 -k uvicorn.workers.UvicornH11Worker --daemon
+</code></pre>
+<p>获取 Gunicorn 进程树</p>
+<pre><code>pstree -ap | grep gunicorn
+</code></pre>
+<p>杀死 Gunicorn 服务</p>
+<pre><code>kill -HUP ID
+kill -9 ID
+</code></pre>
 <h2 id="_1">用户管理</h2>
 <h3 id="_2">添加用户</h3>
 <pre><code class="language-shell">useradd username

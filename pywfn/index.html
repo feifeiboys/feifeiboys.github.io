@@ -330,9 +330,87 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          介绍
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         介绍
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    下载
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    功能介绍
+  </a>
+  
+    <nav class="md-nav" aria-label="功能介绍">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    读取文件
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    计算键级
+  </a>
+  
+    <nav class="md-nav" aria-label="计算键级">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    计算原子属性
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    实用功能
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -347,6 +425,20 @@
     <li class="md-nav__item">
       <a href="algorithm/" class="md-nav__link">
         算法
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ideas/" class="md-nav__link">
+        Ideas
       </a>
     </li>
   
@@ -627,6 +719,68 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    下载
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    功能介绍
+  </a>
+  
+    <nav class="md-nav" aria-label="功能介绍">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    读取文件
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    计算键级
+  </a>
+  
+    <nav class="md-nav" aria-label="计算键级">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    计算原子属性
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    实用功能
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -642,11 +796,14 @@
 
 <h1 id="_1">介绍</h1>
 <p>pywfn是一款基于python的波函数分析工具,当然不止波函数分析,分子可视化,文件处理等功能也可以做到</p>
-<h1 id="_2">下载</h1>
-<p>下载链接：<a href="./pywfn.zip">pywfn</a></p>
-<p>下载完成后，解压到<code>pywfn</code>文件夹内，然后双击运行<code>pywfn.exe</code>即可，这是一个下载器，初次启动时会自动下载资源，并且以后每次运行时如果检测到更新就可以自动下载更新内容，省心</p>
-<h1 id="_3">功能介绍</h1>
-<h2 id="_4">读取文件</h2>
+<h2 id="_2">下载</h2>
+<p>下载链接：<a href="http://39.108.88.150:8000/static/pywfn.exe">pywfn</a></p>
+<p>下载完成后，将其放到一个空文件夹内，然后双击运行<code>pywfn.exe</code>即可</p>
+<blockquote>
+<p>这是一个下载器，初次启动时会自动下载项目需要的第三方库(需要联网)，之后每次运行可以检测更新；点击<code>main.bat</code>会直接运行程序、不检测更新</p>
+</blockquote>
+<h2 id="_3">功能介绍</h2>
+<h3 id="_4">读取文件</h3>
 <p>目前pywfn支持的文件格式有log/out、fch和xyz格式</p>
 <h2 id="_5">计算键级</h2>
 <ul>
@@ -654,29 +811,25 @@
 <li><span class="arithmatex">\(\pi\)</span>键键级<ul>
 <li>DH</li>
 <li>SH</li>
-<li>DM</li>
+<li><code>DM</code> 最好用(目前)</li>
 <li>SM</li>
 </ul>
 </li>
 </ul>
 <blockquote>
-<p>π键键级根据轨道的筛选方式 (轨道挑选法 selection 和 轨道分解法 decomposion) 与键级的计算公式(Mayer和HMO)两两匹配可以分为四种；其中使用Mayer作为键级公式的方法都需要要重构密度矩阵，DH方法计算<strong>线性分子</strong>时会有两个方向，因此会有两个键级</p>
+<p>D代表轨道分解法，S代表轨道挑选法；H代表HMO键级，M代表Mayer键级。两两组合便有了四种键级。</p>
+<p>注意：含有Mayer键级的功能需要用到<strong>重叠矩阵</strong>，高斯中使用<code>iop(3/33=1)</code>关键词即可。</p>
 </blockquote>
-<h2 id="_6">计算原子属性</h2>
+<h3 id="_6">计算原子属性</h3>
 <ul>
 <li>Mulliken电荷</li>
 <li>Muiilken-<span class="arithmatex">\(\pi\)</span>电荷</li>
 </ul>
-<h2 id="_7">实用功能</h2>
+<h3 id="_7">实用功能</h3>
 <ul>
 <li>扫描文件分割</li>
 <li>导出SI文件</li>
 <li>批量生成gjf文件</li>
-</ul>
-<h1 id="_8">奇思妙想</h1>
-<ul>
-<li>为了避免多次重复读取同一个文件，可以将pywfn生成的python对象保存在与该文件同目录的文件夹下，这样在读取文件的时候如果检测到有保存的python对象就不用在读取文件了</li>
-<li>将需要的第三方库单独放在<code>site-packages</code>文件夹下,原本的嵌入<code>python</code>不要动。看看所需要的体积是不是会减少很多</li>
 </ul>
 
 
