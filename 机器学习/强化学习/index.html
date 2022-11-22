@@ -606,6 +606,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../%E7%BC%96%E7%A8%8B/jupyter/" class="md-nav__link">
+        Jupyter
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../%E7%BC%96%E7%A8%8B/linux/" class="md-nav__link">
         Linux
       </a>
@@ -974,6 +988,94 @@ https://github.com/louisnino/RLcode/blob/master/tutorial_Qlearning.py
 - 我们知道，解决连续型问题，如果表格不能表示，就用函数，而最好的函数就是深度神经网络。
 - 和有监督学习不同，深度强化学习中，我们需要自己找更新目标。通常在马尔科夫链体系下，两个相邻状态状态差一个奖励r经常能被利用。</p>
 <p>https://github.com/louisnino/RLcode/blob/master/tutorial_DQN.py</p>
+<p>代码实现，以寻找二维平面最低点为例
+首先要定义环境，该环境包含智能体的状态，即位置。
+环境要有一个reset函数，调用的时候会重新设置环境的状态。
+环境还有有一个step函数，传入的是动作序号(动作的数量是一定的：上下左右移动)，该函数会对环境进行更新，并且返回更新后获得的新状态、奖励、以及是否结束。</p>
+<pre><code class="language-python">class Env:
+    def __init__(self) -&gt; None:
+        ...
+
+    def pes(self,pos):
+        &quot;&quot;&quot;势能面&quot;&quot;&quot;
+        x,y=pos
+        return x**2+y**2
+
+    def reset(self):
+        self.pos=np.random.rand(2)*10-5
+        self.e=self.pes(self.pos)
+        return self.pos
+
+    def step(self,a:int):
+        ms=np.array([
+            [ 1,0],
+            [-1,0],
+            [0,1 ],
+            [0,-1]
+        ])*0.1
+        pos=self.pos+ms[a]
+        e=self.pes(pos)
+        r=1 if (self.e-e)&gt;0 else -1 #能量降低，奖励为正，能量升高，奖励为负
+        d=True if (e&gt; self.e+10) else False
+        self.pos=pos
+        self.e=e
+        return pos,r,d
+</code></pre>
+<p>然后需要定义一个智能体，能够根据当前位置，进行分类，本例中为四分类，分别是每个每种行为对应的Q值</p>
+<pre><code class="language-python">class Net(torch.nn.Module):
+    def __init__(self) -&gt; None:
+        super().__init__()
+        self.linear=torch.nn.Sequential(
+            torch.nn.Linear(2,2),
+            torch.nn.ReLU(),
+            torch.nn.Linear(2,4),
+            torch.nn.ReLU(),
+            torch.nn.Linear(4,4),
+            torch.nn.Sigmoid()
+        )
+
+    def forward(self,pos:np.ndarray)-&gt;np.ndarray:
+        pos=torch.from_numpy(pos).type(torch.float32)
+        return self.linear(pos)
+</code></pre>
+<p>然后实例化环境和智能体，进行迭代训练，损失的计算方法如下：
+1. 将当前的状态<span class="arithmatex">\(S_t\)</span>代入智能体计算出向量<span class="arithmatex">\(Q_t\)</span>
+2. 选择其中最大的<span class="arithmatex">\(q\)</span>值对应的行为指标<span class="arithmatex">\(a_t\)</span>
+3. 将<span class="arithmatex">\(a_t\)</span>代入环境更新获得新的状态<span class="arithmatex">\(S_{t+1}\)</span>以及奖励<span class="arithmatex">\(r\)</span>
+4. 将<span class="arithmatex">\(S_{t+1}\)</span>代入智能体获得新的向量<span class="arithmatex">\(Q_{t+1}\)</span>
+5. 找出其q值最大的指标<span class="arithmatex">\(a_{t+1}\)</span>
+6. 拷贝一份原本的<span class="arithmatex">\(Q\)</span>，记为<span class="arithmatex">\(Q'\)</span>
+7. 将<span class="arithmatex">\(Q'[a]\)</span>替换为 <span class="arithmatex">\(r+\lambda Q_{t+1}[a_{t+1}]\)</span>
+8. <span class="arithmatex">\(Q'\)</span>与<span class="arithmatex">\(Q_t\)</span>之间的差距就是损失</p>
+<pre><code class="language-python">env=Env()
+net=Net()
+loss_fn=torch.nn.MSELoss()
+optimer=torch.optim.Adam(net.parameters())
+
+for i in range(1000):
+    total_loss=0
+    total_reward=0
+    s=env.reset()
+    for j in range(1000):
+        Q=net(s) #Q值向量
+        a=torch.argmax(Q).item() #行为指标
+        q=Q[a] #行为对应的Q值
+        s_,r,d=env.step(a) # 根据行为迭代一次环境
+        total_reward+=r
+        Q_=net(s_) #下一步的Q值向量
+        a_=torch.argmax(Q_).item() # 下一步的行为指标
+        q_=Q_[a_] #下一步行为的Q值
+        targetQ=Q.detach().numpy().copy()
+        targetQ[a]=r+0.8*q_
+        loss=loss_fn(Q,torch.from_numpy(targetQ))
+        optimer.zero_grad()
+        loss.backward()
+        optimer.step()
+        total_loss+=loss.item()
+        s=s_
+    print(f'{total_loss:&gt;10.4f}    {total_reward:&lt;4}    {i}/1000')
+torch.save(net.state_dict(),'DGN.pt')
+</code></pre>
 <h2 id="ddpg">DDPG</h2>
 
 
