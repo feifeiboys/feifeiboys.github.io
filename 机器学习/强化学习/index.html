@@ -242,6 +242,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../pywfn/QA/" class="md-nav__link">
+        问答
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../pywfn/ideas/" class="md-nav__link">
         计划
       </a>
@@ -258,6 +272,20 @@
     <li class="md-nav__item">
       <a href="../../pywfn/manager/" class="md-nav__link">
         logManager
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pywfn/%E7%94%A8%E6%88%B7%E6%89%8B%E5%86%8C/" class="md-nav__link">
+        用户手册
       </a>
     </li>
   
@@ -382,6 +410,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../pytorch/" class="md-nav__link">
+        Pytorch
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../selfAttation/" class="md-nav__link">
         selfAttation
       </a>
@@ -490,6 +532,13 @@
         <li class="md-nav__item">
   <a href="#dqn" class="md-nav__link">
     DQN
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#actor-critic" class="md-nav__link">
+    Actor-Critic
   </a>
   
 </li>
@@ -650,6 +699,20 @@
     <li class="md-nav__item">
       <a href="../../%E7%BC%96%E7%A8%8B/python/" class="md-nav__link">
         Python
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%BC%96%E7%A8%8B/wsl/" class="md-nav__link">
+        Wsl
       </a>
     </li>
   
@@ -922,6 +985,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#actor-critic" class="md-nav__link">
+    Actor-Critic
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#ddpg" class="md-nav__link">
     DDPG
   </a>
@@ -988,7 +1058,7 @@ https://github.com/louisnino/RLcode/blob/master/tutorial_Qlearning.py
 - 我们知道，解决连续型问题，如果表格不能表示，就用函数，而最好的函数就是深度神经网络。
 - 和有监督学习不同，深度强化学习中，我们需要自己找更新目标。通常在马尔科夫链体系下，两个相邻状态状态差一个奖励r经常能被利用。</p>
 <p>https://github.com/louisnino/RLcode/blob/master/tutorial_DQN.py</p>
-<p>代码实现，以寻找二维平面最低点为例
+<p>代码实现，以寻找二维平面最低点为例<br />
 首先要定义环境，该环境包含智能体的状态，即位置。
 环境要有一个reset函数，调用的时候会重新设置环境的状态。
 环境还有有一个step函数，传入的是动作序号(动作的数量是一定的：上下左右移动)，该函数会对环境进行更新，并且返回更新后获得的新状态、奖励、以及是否结束。</p>
@@ -1076,6 +1146,13 @@ for i in range(1000):
     print(f'{total_loss:&gt;10.4f}    {total_reward:&lt;4}    {i}/1000')
 torch.save(net.state_dict(),'DGN.pt')
 </code></pre>
+<h2 id="actor-critic">Actor-Critic</h2>
+<p>Actor-Critic，其实是用了两个网络：</p>
+<p>两个网络有一个共同点，输入状态S:
+- Actor，输出行为向量
+- Critic，输出分数值</p>
+<p>TD-error: <span class="arithmatex">\(\gamma \times V(s') + r - V(s)\)</span><br />
+Critic的任务就是让TD-error尽量小。然后TD-error给Actor做更新。</p>
 <h2 id="ddpg">DDPG</h2>
 
 
