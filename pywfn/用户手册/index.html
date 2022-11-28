@@ -481,6 +481,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/TransFormer/" class="md-nav__link">
+        TransFormer
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/pytorch/" class="md-nav__link">
         Pytorch
       </a>
@@ -495,8 +509,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/selfAttation/" class="md-nav__link">
-        selfAttation
+      <a href="../../%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E4%BD%BF%E7%94%A8%E6%A8%A1%E5%9E%8B/" class="md-nav__link">
+        github模型
       </a>
     </li>
   
@@ -613,6 +627,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../%E7%BC%96%E7%A8%8B/git/" class="md-nav__link">
+        Git
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../%E7%BC%96%E7%A8%8B/jupyter/" class="md-nav__link">
         Jupyter
       </a>
@@ -629,6 +657,20 @@
     <li class="md-nav__item">
       <a href="../../%E7%BC%96%E7%A8%8B/linux/" class="md-nav__link">
         Linux
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%BC%96%E7%A8%8B/micropython/" class="md-nav__link">
+        MicroPython的学习
       </a>
     </li>
   
@@ -670,7 +712,7 @@
   
     <li class="md-nav__item">
       <a href="../../%E7%BC%96%E7%A8%8B/wsl/" class="md-nav__link">
-        Wsl
+        WSL
       </a>
     </li>
   
@@ -717,8 +759,36 @@
   
   
     <li class="md-nav__item">
+      <a href="../../%E8%AE%A1%E7%AE%97%E5%8C%96%E5%AD%A6/gaussian/" class="md-nav__link">
+        Gaussian
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../%E8%AE%A1%E7%AE%97%E5%8C%96%E5%AD%A6/gto/" class="md-nav__link">
         高斯型波函数
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%AE%A1%E7%AE%97%E5%8C%96%E5%AD%A6/pyscf/" class="md-nav__link">
+        pyscf
       </a>
     </li>
   
@@ -934,10 +1004,16 @@
 <h2 id="pywfn">pywfn命令行</h2>
 <p>程序启动时可以输入文件路径或文件夹路径(复制或拖动皆可)，输入文件夹主要是为了程序的批处理，计算单个文件时最好只输入一个文件</p>
 <p>使用高斯计算需要的参数<code>pop=full gfinput iop(3/33=1)</code></p>
+<blockquote>
+<p>pop=full：打印所有轨道系数；gfinput：打印基组信息；iop(3/33=1)：打印重叠矩阵等。</p>
+</blockquote>
 <p>在程序没有特殊提示的地方，直接按回车可以返回上一级</p>
 <h3 id="_1">计算键级</h3>
 <p>主功能1是计算键级，目前可以计算的键级有piDM、piSM、piDH、piSH、Mayer</p>
 <p>含有pi的都是计算π键键级，D代表轨道分解法，S代表轨道挑选法，M代表Mayer键级，H代表HMO键级。目前推荐使用piDM方法。含有Mayer键级计算方法的都需要重叠矩阵。</p>
+<blockquote>
+<p>如果没有重叠矩阵的话，程序会使用单位对角矩阵作为重叠矩阵、计算结果将会有误差，所以请务必加上重叠矩阵</p>
+</blockquote>
 <h2 id="_2">原子属性</h2>
 <p>主功能2是计算原子属性，目前可以计算<code>Mulliken电荷分布</code>以及<code>pi电子分布</code></p>
 <h2 id="_3">窗口程序</h2>

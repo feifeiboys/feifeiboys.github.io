@@ -15,7 +15,7 @@
     
     
       
-        <title>Wsl - 小飞的博客</title>
+        <title>WSL - 小飞的博客</title>
       
     
     
@@ -68,7 +68,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#wsl" class="md-skip">
           Skip to content
         </a>
       
@@ -101,7 +101,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Wsl
+              WSL
             
           </span>
         </div>
@@ -408,6 +408,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/TransFormer/" class="md-nav__link">
+        TransFormer
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/pytorch/" class="md-nav__link">
         Pytorch
       </a>
@@ -422,8 +436,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/selfAttation/" class="md-nav__link">
-        selfAttation
+      <a href="../../%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E4%BD%BF%E7%94%A8%E6%A8%A1%E5%9E%8B/" class="md-nav__link">
+        github模型
       </a>
     </li>
   
@@ -542,6 +556,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../git/" class="md-nav__link">
+        Git
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../jupyter/" class="md-nav__link">
         Jupyter
       </a>
@@ -558,6 +586,20 @@
     <li class="md-nav__item">
       <a href="../linux/" class="md-nav__link">
         Linux
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../micropython/" class="md-nav__link">
+        MicroPython的学习
       </a>
     </li>
   
@@ -604,14 +646,16 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
       
+        
+      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Wsl
+          WSL
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Wsl
+        WSL
       </a>
       
         
@@ -619,6 +663,8 @@
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
+  
+    
   
   
     <label class="md-nav__title" for="__toc">
@@ -637,6 +683,20 @@
         <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
     修改主机名
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jupyter" class="md-nav__link">
+    使用jupyter
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    限制内存占用
   </a>
   
 </li>
@@ -690,8 +750,36 @@
   
   
     <li class="md-nav__item">
+      <a href="../../%E8%AE%A1%E7%AE%97%E5%8C%96%E5%AD%A6/gaussian/" class="md-nav__link">
+        Gaussian
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../%E8%AE%A1%E7%AE%97%E5%8C%96%E5%AD%A6/gto/" class="md-nav__link">
         高斯型波函数
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%AE%A1%E7%AE%97%E5%8C%96%E5%AD%A6/pyscf/" class="md-nav__link">
+        pyscf
       </a>
     </li>
   
@@ -839,6 +927,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -860,6 +950,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#jupyter" class="md-nav__link">
+    使用jupyter
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    限制内存占用
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -875,25 +979,68 @@
                   
 
 
-  <h1>Wsl</h1>
-
+<h1 id="wsl">WSL</h1>
 <h2 id="_1">迁移目录</h2>
 <blockquote>
 <p>wsl默认的位置是在c盘，我们可以将其迁移到其他盘</p>
 </blockquote>
 <p>1 导出系统</p>
-<pre><code>wsl --export Ubuntu-20.04 D:\wsl-ubuntu-20.04.tar
+<pre><code>wsl --export Ubuntu-20.04 D:\wsl-ubuntu-20.04
 # 即 wsl --export &lt;系统名&gt; &lt;导出目录&gt;
 </code></pre>
 <p>2 删除系统</p>
 <pre><code>wsl --unregister Ubuntu-20.04
 </code></pre>
 <p>3 导入系统到指定位置</p>
-<pre><code>wsl --import Ubuntu-20.04 D:\WSL2_Ubuntu D:\wsl-ubuntu-20.04.tar --version 2
+<pre><code>wsl --import Ubuntu-20.04 D:\WSL2_Ubuntu D:\wsl-ubuntu-20.04 --version 2
 # wsl --import &lt;系统名&gt; &lt;安装位置&gt; &lt;tar文件目录&gt; WSL版本号
+</code></pre>
+<p>4 设置默认用户</p>
+<pre><code>Ubuntu2004 config --default-user fly
 </code></pre>
 <h2 id="_2">修改主机名</h2>
 <p>wsl里ubuntu的主机名与电脑的<code>设备名称</code>是相同的，在电脑属性中<code>重命名这台电脑</code>即可</p>
+<h2 id="jupyter">使用jupyter</h2>
+<p>在wsl中直接执行juoyter lab不太行</p>
+<ol>
+<li>建立浏览器连接</li>
+</ol>
+<pre><code class="language-bash">sudo ln -s /mnt/c/Program\ Files\ \(x86\)/Microsoft/Edge/Application/msedge.exe /usr/bin/edge
+</code></pre>
+<p>用如下命令验证：</p>
+<pre><code class="language-bash">edge www.baidu.com
+</code></pre>
+<p>能打开说明软连接建立成功</p>
+<ol>
+<li>配置jupyterlab</li>
+</ol>
+<p>（1）查看是否存在 /home/<username>/.jupyter/jupyter_lab_config.py，若不存在，在Ubuntu shell中执行</p>
+<pre><code>jupyter lab --generate-config
+</code></pre>
+<p>来生成配置文件</p>
+<p>（2）修改 jupyter_lab_config.py</p>
+<p>打开配置文件，修改如下内容</p>
+<pre><code class="language-python">c.ServerApp.use_redirect_file = False
+# 注意不要有空格(吃过大亏)
+</code></pre>
+<p>然后添加如下内容：</p>
+<pre><code class="language-python">import webbrowser
+webbrowser.register('edge',None,webbrowser.GenericBrowser('/usr/bin/edge'))
+c.NotebookApp.browser = 'edge'
+</code></pre>
+<blockquote>
+<p>参考 https://note.youdao.com/ynoteshare/index.html?id=5fa2c4018454da6894391f41010b3cc3&amp;type=note&amp;_time=1669365812773</p>
+</blockquote>
+<h2 id="_3">限制内存占用</h2>
+<p>如果不加限制的话，wsl在运行程序是会占用很多电脑内存，导致电脑很卡。</p>
+<p>输入如下命令可以查看linux内存的占用情况</p>
+<pre><code class="language-bash">free -h --giga
+</code></pre>
+<p>在c盘电脑用户下创建<code>.wslconfig</code>文件，写入：</p>
+<pre><code>[wsl2]
+memory=3GB
+</code></pre>
+<p>即可将wsl的占用内存限制为3GB</p>
 
 
 
@@ -930,13 +1077,13 @@
       
       
         
-        <a href="../../%E8%AE%A1%E7%AE%97%E5%8C%96%E5%AD%A6/gto/" class="md-footer__link md-footer__link--next" aria-label="Next: 高斯型波函数" rel="next">
+        <a href="../../%E8%AE%A1%E7%AE%97%E5%8C%96%E5%AD%A6/gaussian/" class="md-footer__link md-footer__link--next" aria-label="Next: Gaussian" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              高斯型波函数
+              Gaussian
             </div>
           </div>
           <div class="md-footer__button md-icon">
