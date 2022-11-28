@@ -27,3 +27,5 @@ LayerNorm单独对一个样本的所有单词缩放
 mask,将当前的词汇之后的词汇隐藏掉
 
 encoder生成K,V矩阵，decoder输入Q矩阵
+
+## pytorch实现
