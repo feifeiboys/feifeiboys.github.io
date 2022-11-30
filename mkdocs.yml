@@ -1,5 +1,6 @@
 site_name: 小飞的博客
-site_author: feifeiboy
+site_author: xiaofei
+site_description: '路漫漫其修远兮，吾将上下而求索'
 # nav:
 #   - Home: index.md
 #   - Pywfn:
@@ -17,6 +18,6 @@ markdown_extensions:
       generic: true
 
 extra_javascript:
-  - libs/mathjax.js
+  - https://cdn.bootcss.com/mathjax/3.0.5/es5/tex-mml-chtml.js
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
