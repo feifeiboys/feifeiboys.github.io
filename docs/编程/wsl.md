@@ -2,23 +2,27 @@
 ## 迁移目录
 > wsl默认的位置是在c盘，我们可以将其迁移到其他盘
 
-1 导出系统
+1 查看已经安装的linux发行版
 ```
-wsl --export Ubuntu-20.04 D:\wsl-ubuntu-20.04
+wsl --list --verbose
+```
+2 导出系统
+```
+wsl --export Ubuntu D:\wsl-ubuntu
 # 即 wsl --export <系统名> <导出目录>
 ```
-2 删除系统
+3 删除系统
 ```
-wsl --unregister Ubuntu-20.04
+wsl --unregister Ubuntu
 ```
-3 导入系统到指定位置
+4 导入系统到指定位置
 ```
-wsl --import Ubuntu-20.04 D:\WSL2_Ubuntu D:\wsl-ubuntu-20.04 --version 2
+wsl --import Ubuntu D:\WSL2_Ubuntu D:\wsl-ubuntu --version 2
 # wsl --import <系统名> <安装位置> <tar文件目录> WSL版本号
 ```
-4 设置默认用户
+5 设置默认用户
 ```
-Ubuntu2004 config --default-user fly
+Ubuntu config --default-user fly
 ```
 ## 修改主机名
 wsl里ubuntu的主机名与电脑的`设备名称`是相同的，在电脑属性中`重命名这台电脑`即可
