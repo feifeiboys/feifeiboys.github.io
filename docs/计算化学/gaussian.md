@@ -2,7 +2,7 @@
 1. 创建一个`gaussian`文件夹，将压缩包`G16_C02_AVX2.tbJ`复制进去
 2. 解压压缩包，得到一个`g16`的目录
 ```bash
-tar xvf G16_C02_AVX2.tbJ
+tar -xvf G16_C02_AVX2.tbJ
 ```
 3. 创建一个`scr`文件夹，用来存储临时文件
 4. 设置环境变量
@@ -29,6 +29,5 @@ sudo apt-get install csh # 用来调用c shell
 ./bsd/install
 
 source $GAUSS_EXEDIR/bsd/g16.profile # 执行并在.bashrc中写入
-
-$g16root/g16
 ```
+然后就能通过`g16 <文件名>`的方式运行计算了。

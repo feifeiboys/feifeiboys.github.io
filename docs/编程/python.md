@@ -28,3 +28,8 @@ from functools import lru_cache,cached_property
 当做好程序想给别人用时，打包是个麻烦事，因为打包之后的程序会很大，所以嵌入版本的python是一个好选择
 
 ## cython
+
+## 大项目避免循环导入
+假设我们现在有两个文件mol.py和atom.py，里面分别定义了Mol和Atom，现在我们需要在mol中导入Atom，在atom中导入Mol，直接导入的话肯定会因为循环导入而报错，那该怎么办呢？
+
+**不要直接导入类，而是要导入文件，并且注解使用引号括起来**
