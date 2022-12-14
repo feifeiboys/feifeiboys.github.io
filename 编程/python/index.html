@@ -244,6 +244,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../%E6%95%B0%E5%AD%A6/%E6%9C%80%E4%BC%98%E5%8C%96/" class="md-nav__link">
+        最优化
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../%E6%95%B0%E5%AD%A6/%E6%A6%82%E7%8E%87%E8%AE%BA/" class="md-nav__link">
         概率论
       </a>
@@ -322,6 +336,20 @@
     <li class="md-nav__item">
       <a href="../../%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E4%BD%BF%E7%94%A8%E6%A8%A1%E5%9E%8B/" class="md-nav__link">
         github模型
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/%E5%8D%8A%E7%BB%8F%E9%AA%8C%E6%96%B9%E6%B3%95/" class="md-nav__link">
+        半经验方法
       </a>
     </li>
   
@@ -627,10 +655,38 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    运行脚本时隐藏命令行
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    进制转换
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
       
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pyvista/" class="md-nav__link">
+        Pyvista
+      </a>
     </li>
   
 
@@ -906,8 +962,36 @@
   
   
     <li class="md-nav__item">
+      <a href="../../%E8%AF%BB%E8%AE%BA%E6%96%87/2022-12-10/" class="md-nav__link">
+        2022 12 10
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../%E8%AF%BB%E8%AE%BA%E6%96%87/2022-12-2/" class="md-nav__link">
         2022 12 2
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%AF%BB%E8%AE%BA%E6%96%87/2022-12-9/" class="md-nav__link">
+        2022 12 9
       </a>
     </li>
   
@@ -988,6 +1072,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    运行脚本时隐藏命令行
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    进制转换
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1030,6 +1128,26 @@
 <h2 id="_2">大项目避免循环导入</h2>
 <p>假设我们现在有两个文件mol.py和atom.py，里面分别定义了Mol和Atom，现在我们需要在mol中导入Atom，在atom中导入Mol，直接导入的话肯定会因为循环导入而报错，那该怎么办呢？</p>
 <p><strong>不要直接导入类，而是要导入文件，并且注解使用引号括起来</strong></p>
+<h2 id="_3">运行脚本时隐藏命令行</h2>
+<pre><code class="language-python">import ctypes
+whnd = ctypes.windll.kernel32.GetConsoleWindow()
+if whnd != 0:
+    ctypes.windll.user32.ShowWindow(whnd, 0)
+    ctypes.windll.kernel32.CloseHandle(whnd)
+</code></pre>
+<h2 id="_4">进制转换</h2>
+<p>首先是用函数，十进制转换为别的进制：</p>
+<pre><code class="language-python">bin() # 十进制转二进制
+oct() # 十进制转八进制
+hex() # 十进制转十六进制
+</code></pre>
+<p>然后是f字符串，也可以将数字转为指定进制输出</p>
+<pre><code>n=10
+f'{n:b}' # 二进制
+f'{n:o}' # 八进制
+f'{n:x}' # 十六进制
+f'{n:e}' # 科学计数
+</code></pre>
 
 
 
@@ -1066,13 +1184,13 @@
       
       
         
-        <a href="../wsl/" class="md-footer__link md-footer__link--next" aria-label="Next: WSL" rel="next">
+        <a href="../pyvista/" class="md-footer__link md-footer__link--next" aria-label="Next: Pyvista" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              WSL
+              Pyvista
             </div>
           </div>
           <div class="md-footer__button md-icon">
