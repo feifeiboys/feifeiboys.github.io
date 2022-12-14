@@ -33,3 +33,29 @@ from functools import lru_cache,cached_property
 假设我们现在有两个文件mol.py和atom.py，里面分别定义了Mol和Atom，现在我们需要在mol中导入Atom，在atom中导入Mol，直接导入的话肯定会因为循环导入而报错，那该怎么办呢？
 
 **不要直接导入类，而是要导入文件，并且注解使用引号括起来**
+
+## 运行脚本时隐藏命令行
+```python
+import ctypes
+whnd = ctypes.windll.kernel32.GetConsoleWindow()
+if whnd != 0:
+    ctypes.windll.user32.ShowWindow(whnd, 0)
+    ctypes.windll.kernel32.CloseHandle(whnd)
+```
+
+## 进制转换
+首先是用函数，十进制转换为别的进制：
+```python
+bin() # 十进制转二进制
+oct() # 十进制转八进制
+hex() # 十进制转十六进制
+```
+然后是f字符串，也可以将数字转为指定进制输出
+```
+n=10
+f'{n:b}' # 二进制
+f'{n:o}' # 八进制
+f'{n:x}' # 十六进制
+f'{n:e}' # 科学计数
+```
+
