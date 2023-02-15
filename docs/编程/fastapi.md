@@ -10,3 +10,40 @@ uvicorn main:app --reload
 - --port: 指定端口
 - --reload：让服务器在更新代码后重新启动。仅在开发时使用该选项。
 ## 部署
+
+
+## pydantic
+> 用于python的类型提示(type hints)，指定的数据类型可以是python语言自带的，也可以是自定义的
+```python
+from pydantic import BaseModel
+from typing import Optional
+# 自定义数据类型
+class Man(BaseModel):
+	name:str
+	age:int
+	sex:str="man" #指定默认
+	height:Optional[float] #可选
+
+data={
+	"name":"fly",
+	"age":18,
+	"sex":"man",
+	"height":1.8
+}
+fly=Man(**data) # 用解包的方式使用字典数据实例化类型
+```
+
+基于python类型提示来定义数据验证，序列化和文档(JSON)库
+
+## starlette
+轻量级ASGI框架/工具包，是构建高性能Asyncio服务的理想选择
+
+ASGI服务(异步python web框架服务)：`Uvicorn`、Hypercorn、Daphne  
+WSGI服务(同步python web框架服务)：uWSGI、Gunicorn
+
+FastApi=(Pydantic+Starlette)
+
+
+在服务器上可以每个项目创建一个虚拟环境(virtual env)(当包比较多的时候可能会遇到版本不兼容问题)
+
+> 课程进度 8/44
