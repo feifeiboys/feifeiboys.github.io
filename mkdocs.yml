@@ -12,6 +12,9 @@ theme:
   name: material
   palette:
     primary: light blue
+  features:
+    - navigation.tracking
+    - navigation.tabs
 
 markdown_extensions:
   - pymdownx.arithmatex:
