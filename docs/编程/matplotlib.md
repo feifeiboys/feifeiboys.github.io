@@ -15,6 +15,9 @@ ax.text(-0.1, 1.05, '(f)', transform=ax.transAxes, size=markSize)
 ```python
 fig.savefig('image.png',bbox_inches='tight',dpi=300)
 ```
+## 调整子图间距离
+plt.subplots_adjust(left=None, bottom=None, right=None, top=None, wspace=None, hspace=0.5)
+
 ## 使用`SciencePlots`：论文绘图工具包
 项目地址: https://github.com/garrettj403/SciencePlots
 
@@ -24,10 +27,11 @@ fig.savefig('image.png',bbox_inches='tight',dpi=300)
 在绘制期刊上的图片时，全幅一般15cm，半幅一般7.5cm，而matplotlib图片大小的单位是inchi(英寸)，一厘米=0.4英寸，所以全幅图片宽度应为6，半幅宽度应为3，单个图片宽度七厘米，高度六厘米
 
 总结：
-- 宽度=$7.5*0.4*n$
-- 高度=$6*0.4*n$
-- dpi=300
+- 宽度=$7.5*0.4*n$  
+- 高度=$6*0.4*n$  
+- dpi=300  
 - wSpace=0.2,hSpace=0.3
+
 ## 字体大小
 matplotlib中字体大小的默认单位是像素，而word中的单位是磅，1磅=4/3像素
 ## 显示绘制svg
