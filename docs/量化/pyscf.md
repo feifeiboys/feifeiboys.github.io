@@ -16,3 +16,7 @@ mol.build()
 - atom 原子类型及坐标
 - basis 基组
 - unit 单位
+
+## 缩写解释
+- mf,mean filed
+- xc 电子密度相关泛函的缩写，它代表着交换-相关能的表达式

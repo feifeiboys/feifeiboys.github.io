@@ -1,3 +1,4 @@
+# gaussian
 ## 在linux安装gaussian
 1. 创建一个`gaussian`文件夹，将压缩包`G16_C02_AVX2.tbJ`复制进去
 2. 解压压缩包，得到一个`g16`的目录
