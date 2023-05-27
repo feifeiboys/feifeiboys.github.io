@@ -15,20 +15,20 @@ jupyter lab --no-browser --port=2029 #使用无浏览器模式，端口可任意
 scp 本地文件 用户名@ip:文件夹
 ```
 
-## gunicorn
-部署fastapi服务
+## 换源
+1. 在清华大学镜像搜索ubuntu
+2. 选择对应的版本 查看版本号：`cat /etc/issue`
+3. 备份原本的源 `sudo cp /etc/apt/sources.list /etc/apt/sources.list.backup`
+4. 修改源文件 `sudo vim /etc/apt/sources.list`，替换为镜像内容
+5. 更新源命令：`sudo apt update`，`sudo apt upgrade`
+
+
+> 如果这时出现无法解析国内的域名，一般来说是dns出错了
 ```
-gunicorn main:app -b 0.0.0.0:8000  -w 4 -k uvicorn.workers.UvicornH11Worker --daemon
+vim /etc/resolv.conf
+nameserver 8.8.8.8
 ```
-获取 Gunicorn 进程树
-```
-pstree -ap | grep gunicorn
-```
-杀死 Gunicorn 服务
-```
-kill -HUP ID
-kill -9 ID
-```
+
 ## 作业
 作业(Job)是shell管理的进程(每个job都有一个关联的PID)，每个作业会被分配一个线性job ID。
 有两种形式的作业:
