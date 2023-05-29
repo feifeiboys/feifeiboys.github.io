@@ -248,7 +248,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../chatgpt/" class="md-tabs__link md-tabs__link--active">
+      <a href="../blender/" class="md-tabs__link md-tabs__link--active">
         编程
       </a>
     </li>
@@ -788,6 +788,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%96%87%E7%8C%AE/2023-5-18/" class="md-nav__link">
+        2023 5 18
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -824,6 +838,20 @@
           编程
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../blender/" class="md-nav__link">
+        blender笔记
+      </a>
+    </li>
+  
+
+            
           
             
               
@@ -875,6 +903,20 @@
     <li class="md-nav__item">
       <a href="../ffmpeg/" class="md-nav__link">
         Ffmpeg
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fortran/" class="md-nav__link">
+        fortran
       </a>
     </li>
   
@@ -972,28 +1014,28 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#gunicorn" class="md-nav__link">
-    gunicorn
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
-    作业
+    换源
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
-    用户管理
+    作业
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#_4" class="md-nav__link">
+    用户管理
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
     文件管理
   </a>
   
@@ -1437,28 +1479,28 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#gunicorn" class="md-nav__link">
-    gunicorn
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
-    作业
+    换源
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
-    用户管理
+    作业
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#_4" class="md-nav__link">
+    用户管理
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
     文件管理
   </a>
   
@@ -1492,18 +1534,21 @@
 <h2 id="ssh">ssh传输文件</h2>
 <pre><code>scp 本地文件 用户名@ip:文件夹
 </code></pre>
-<h2 id="gunicorn">gunicorn</h2>
-<p>部署fastapi服务</p>
-<pre><code>gunicorn main:app -b 0.0.0.0:8000  -w 4 -k uvicorn.workers.UvicornH11Worker --daemon
+<h2 id="_2">换源</h2>
+<ol>
+<li>在清华大学镜像搜索ubuntu</li>
+<li>选择对应的版本 查看版本号：<code>cat /etc/issue</code></li>
+<li>备份原本的源 <code>sudo cp /etc/apt/sources.list /etc/apt/sources.list.backup</code></li>
+<li>修改源文件 <code>sudo vim /etc/apt/sources.list</code>，替换为镜像内容</li>
+<li>更新源命令：<code>sudo apt update</code>，<code>sudo apt upgrade</code></li>
+</ol>
+<blockquote>
+<p>如果这时出现无法解析国内的域名，一般来说是dns出错了</p>
+</blockquote>
+<pre><code>vim /etc/resolv.conf
+nameserver 8.8.8.8
 </code></pre>
-<p>获取 Gunicorn 进程树</p>
-<pre><code>pstree -ap | grep gunicorn
-</code></pre>
-<p>杀死 Gunicorn 服务</p>
-<pre><code>kill -HUP ID
-kill -9 ID
-</code></pre>
-<h2 id="_2">作业</h2>
+<h2 id="_3">作业</h2>
 <p>作业(Job)是shell管理的进程(每个job都有一个关联的PID)，每个作业会被分配一个线性job ID。
 有两种形式的作业:</p>
 <ul>
@@ -1511,7 +1556,7 @@ kill -9 ID
 <li>Background: 当你在命令后面添加&amp; 符号，命令将不会占据终端窗口(你可在shell prompt继续输入)，这是一个后台Job</li>
 </ul>
 <p><code>jobs</code>命令可以列出所有的job</p>
-<h2 id="_3">用户管理</h2>
+<h2 id="_4">用户管理</h2>
 <p>添加用户 </p>
 <pre><code class="language-shell">useradd username
 useradd -m username #ubutun
@@ -1529,7 +1574,7 @@ exit/logout #返回原用户
 <p>查看当前用户</p>
 <pre><code>whoami
 </code></pre>
-<h2 id="_4">文件管理</h2>
+<h2 id="_5">文件管理</h2>
 <p>重命名文件</p>
 <pre><code>mv 旧名 新名
 </code></pre>
