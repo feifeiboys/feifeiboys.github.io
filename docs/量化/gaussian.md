@@ -26,7 +26,7 @@ chmod -R 700 $GAUSS_EXEDIR
 6. 进入g16目录，安装csh，安装gaussian16
 ```bash
 cd $GAUSS_EXEDIR
-sudo apt-get install csh # 用来调用c shell
+sudo apt install csh # 用来调用c shell
 ./bsd/install
 
 source $GAUSS_EXEDIR/bsd/g16.profile # 执行并在.bashrc中写入
