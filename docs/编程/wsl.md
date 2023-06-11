@@ -76,3 +76,21 @@ free -h --giga
 memory=3GB
 ```
 即可将wsl的占用内存限制为3GB
+
+## 换源无效问题
+- 先安装两个包 `ca-certificates` , `apt-transport-https`
+- 然后备份/etc/apt/sources.list并将内容修改为清华镜像
+- 修改DNS：
+    - 创建wsl.conf文件
+    ```shell
+    sudo vim /etc/wsl.conf
+    ```
+    - 粘贴如下代码，保存退出
+    ```shell
+    [network]
+    generateResolvConf = false
+    ```
+    - 修改etc/resolve.conf文件
+    ```conf
+    nameserver = 8.8.8.8
+    ```

@@ -11,3 +11,7 @@ writer.add_scalar('totalR', totalR, global_step=None, walltime=None)
 
 ## 可视化框架
 - PytorchViz
+
+
+## 遇到的问题
+windows下安装pytorch成功，但是无法导入，将环境变量中的`PYTHONHOME`和`PYTHONPATH`删除即可
