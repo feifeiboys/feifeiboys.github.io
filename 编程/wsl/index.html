@@ -1172,6 +1172,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    换源无效问题
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1542,6 +1549,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    换源无效问题
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1622,6 +1636,24 @@ c.NotebookApp.browser = 'edge'
 memory=3GB
 </code></pre>
 <p>即可将wsl的占用内存限制为3GB</p>
+<h2 id="_4">换源无效问题</h2>
+<ul>
+<li>先安装两个包 <code>ca-certificates</code> , <code>apt-transport-https</code></li>
+<li>然后备份/etc/apt/sources.list并将内容修改为清华镜像</li>
+<li>修改DNS：<ul>
+<li>创建wsl.conf文件
+<code>shell
+sudo vim /etc/wsl.conf</code></li>
+<li>粘贴如下代码，保存退出
+<code>shell
+[network]
+generateResolvConf = false</code></li>
+<li>修改etc/resolve.conf文件
+<code>conf
+nameserver = 8.8.8.8</code></li>
+</ul>
+</li>
+</ul>
 
 
 
