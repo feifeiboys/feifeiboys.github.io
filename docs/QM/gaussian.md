@@ -22,6 +22,7 @@ source ~/.bashrc
 chmod -R 700 $GAUSS_EXEDIR
 # Linux chmod（英文全拼：change mode）命令是控制用户对文件的权限的命令
 # -R : 对目前目录下的所有文件与子目录进行相同的权限变更(即以递归的方式逐个变更)
+# 700：设置文件属主具有全部权限(读取、写入、执行)
 ```
 6. 进入g16目录，安装csh，安装gaussian16
 ```bash
