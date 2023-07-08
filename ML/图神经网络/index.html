@@ -71,7 +71,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#pyg" class="md-skip">
+        <a href="#_1" class="md-skip">
           Skip to content
         </a>
       
@@ -250,7 +250,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../other/oldHFV/" class="md-tabs__link">
+      <a href="../../other/%E5%86%99%E4%BD%9C%E6%8A%80%E5%B7%A7/" class="md-tabs__link">
         Other
       </a>
     </li>
@@ -579,6 +579,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../CS/shell/" class="md-nav__link">
+        shell编程
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../CS/ssh/" class="md-nav__link">
         Ssh
       </a>
@@ -609,34 +623,6 @@
     <li class="md-nav__item">
       <a href="../../CS/wsl/" class="md-nav__link">
         WSL
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../CS/%E5%B9%B6%E5%8F%91/" class="md-nav__link">
-        并发
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../CS/%E8%A3%85%E7%B3%BB%E7%BB%9F/" class="md-nav__link">
-        装系统
       </a>
     </li>
   
@@ -800,9 +786,43 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#pyg" class="md-nav__link">
-    PyG
+  <a href="#_1" class="md-nav__link">
+    基础概念
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#graph-convolution-networksgcn" class="md-nav__link">
+    图卷积网络（Graph Convolution Networks，GCN）
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dgl" class="md-nav__link">
+    DGL
+  </a>
+  
+    <nav class="md-nav" aria-label="DGL">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    构建图
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    复制
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1304,34 +1324,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../other/oldHFV/" class="md-nav__link">
-        oldHFV
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../other/%E5%86%99%E4%BD%9C%E5%A5%BD%E5%8F%A5%E5%AD%90/" class="md-nav__link">
-        写作好句子
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../other/%E5%86%99%E4%BD%9C%E6%8A%80%E5%B7%A7/" class="md-nav__link">
         写作技巧
       </a>
@@ -1501,6 +1493,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../paper/words/" class="md-nav__link">
+        Words
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -1532,9 +1538,43 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#pyg" class="md-nav__link">
-    PyG
+  <a href="#_1" class="md-nav__link">
+    基础概念
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#graph-convolution-networksgcn" class="md-nav__link">
+    图卷积网络（Graph Convolution Networks，GCN）
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dgl" class="md-nav__link">
+    DGL
+  </a>
+  
+    <nav class="md-nav" aria-label="DGL">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    构建图
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    复制
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1555,16 +1595,38 @@
 
   <h1>图神经网络</h1>
 
-<h2 id="pyg">PyG</h2>
-<p>包含以下主要特征</p>
-<ul>
-<li>图数据处理</li>
-<li>通用基准数据集</li>
-<li>Mini-batches</li>
-<li>数据转换</li>
-<li>图上的学习方法</li>
-<li>练习</li>
-</ul>
+<h2 id="_1">基础概念</h2>
+<p>图可以用节点和边的集合表示 <strong>G=(V,E)</strong></p>
+<p>其中一条边可以用一对节点表示 <em>(u,v)</em></p>
+<h2 id="graph-convolution-networksgcn">图卷积网络（Graph Convolution Networks，GCN）</h2>
+<p>对于节点<code>vi</code>聚合周围节点的特征<code>xj</code>来更新特征<code>xi</code></p>
+<p>GCN方法又可以分为两大类，基于谱（spectral-based）和基于空间（spatial-based）。</p>
+<p>GCN基础公式：
+$$
+H^{l+1}=\sigma (\tilde{D} ^{-\frac{1}{2}}\tilde {A}\tilde{D} ^{-\frac{1}{2}}H^lw^l)
+$$
+其中<span class="arithmatex">\(H^l\)</span>是输入特征，<span class="arithmatex">\(H^{l+1}\)</span>是输出特征，<span class="arithmatex">\(w^l\)</span>是线性变换矩阵，<span class="arithmatex">\(\sigma(·)\)</span>是激活函数，<span class="arithmatex">\(A\)</span>是邻接矩阵，<span class="arithmatex">\(\tilde{A}\)</span>是自连接邻接矩阵，<span class="arithmatex">\(\tilde{A}=A+I\)</span>，<span class="arithmatex">\(I\)</span>是单位矩阵，<span class="arithmatex">\(\tilde{D}\)</span>是自连接矩阵的度矩阵，<span class="arithmatex">\(\tilde{D}_{ij}=\sum_{j}\tilde{A}_{ij}\)</span></p>
+<h2 id="dgl">DGL</h2>
+<h3 id="_2">构建图</h3>
+<p>以甲烷CH4为例，中间的C是0，四个H分别为1,2,3,4，分别用边开始和结束的节点的两个列表定义图，则对于双向图</p>
+<pre><code class="language-py">import dgl
+import numpy as np
+
+src=[0,0,0,0]
+des=[1,2,3,4]
+
+u=np.array(src) #因为双向图
+v=np.array(des)
+
+g=dgl.graph((u, v))
+
+g.nodes() #获取图的节点
+g.edges() #获取图的边
+
+bg = dgl.to_bidirected(g) #转为双向图
+</code></pre>
+<h3 id="_3">复制</h3>
+<p><strong>g.ndata</strong>和<strong>g.edata</strong>可以分别为节点和边赋值，两个都是字典</p>
 
 
 

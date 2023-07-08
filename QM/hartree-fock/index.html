@@ -250,7 +250,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../other/oldHFV/" class="md-tabs__link">
+      <a href="../../other/%E5%86%99%E4%BD%9C%E6%8A%80%E5%B7%A7/" class="md-tabs__link">
         Other
       </a>
     </li>
@@ -579,6 +579,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../CS/shell/" class="md-nav__link">
+        shell编程
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../CS/ssh/" class="md-nav__link">
         Ssh
       </a>
@@ -609,34 +623,6 @@
     <li class="md-nav__item">
       <a href="../../CS/wsl/" class="md-nav__link">
         WSL
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../CS/%E5%B9%B6%E5%8F%91/" class="md-nav__link">
-        并发
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../CS/%E8%A3%85%E7%B3%BB%E7%BB%9F/" class="md-nav__link">
-        装系统
       </a>
     </li>
   
@@ -1308,34 +1294,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../other/oldHFV/" class="md-nav__link">
-        oldHFV
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../other/%E5%86%99%E4%BD%9C%E5%A5%BD%E5%8F%A5%E5%AD%90/" class="md-nav__link">
-        写作好句子
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../other/%E5%86%99%E4%BD%9C%E6%8A%80%E5%B7%A7/" class="md-nav__link">
         写作技巧
       </a>
@@ -1505,6 +1463,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../paper/words/" class="md-nav__link">
+        Words
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -1572,7 +1544,12 @@
 <p>两个电子之间作用的积分叫做双电子积分，双电子积分有库伦积分[aa|bb]和交换积分[ab|ba]，库伦积分来自电子间斥力、交换积分来自行列式的反对称性，表示交换两个电子的能量</p>
 <p>平均场，将多体问题转化为单体问题</p>
 <p>变分法</p>
-<p>自洽场 SCF FC=SCE</p>
+<p>本质上讲，自洽场就是一个帮我们获得多电子原子近似波函数的方法。其核心思想是把原子核与(n-1)个电子看作中心力场，将多电子问题转化成单电子问题。</p>
+<p>自洽场 SCF <span class="arithmatex">\(<span class="arithmatex">\(FC=SCE\)</span>\)</span></p>
+<p>库伦，交换，fock算符</p>
+<p>双电子项包含
+库伦项：
+交换项：基于行列式波函数的反对称性</p>
 <h2 id="scf">SCF过程</h2>
 <ol>
 <li>指定一个分子(一组原子坐标<span class="arithmatex">\(\{R_A\}\)</span>，核电荷数<span class="arithmatex">\(\{Z_A\}，电子数量N\)</span>)和一个基组<span class="arithmatex">\(\{\phi_\mu\}\)</span>。</li>
@@ -1592,7 +1569,7 @@
 <p>密度矩阵</p>
 <p>Fock矩阵</p>
 <p>氢原子的STO-nG基组:</p>
-<pre><code>import numpy as np
+<pre><code class="language-py">import numpy as np
 
 STO4G=np.array([
     [0.8021420155E+01,0.5675242080E-01],
