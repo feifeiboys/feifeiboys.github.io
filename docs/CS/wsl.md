@@ -61,9 +61,10 @@ import webbrowser
 webbrowser.register('edge',None,webbrowser.GenericBrowser('/usr/bin/edge'))
 c.NotebookApp.browser = 'edge'
 ```
-> 参考 https://note.youdao.com/ynoteshare/index.html?id=5fa2c4018454da6894391f41010b3cc3&type=note&_time=1669365812773
+
 
 ## 限制内存占用
+
 如果不加限制的话，wsl在运行程序是会占用很多电脑内存，导致电脑很卡。
 
 输入如下命令可以查看linux内存的占用情况
@@ -81,16 +82,18 @@ memory=3GB
 - 先安装两个包 `ca-certificates` , `apt-transport-https`
 - 然后备份/etc/apt/sources.list并将内容修改为清华镜像
 - 修改DNS：
-    - 创建wsl.conf文件
-    ```shell
-    sudo vim /etc/wsl.conf
-    ```
-    - 粘贴如下代码，保存退出
-    ```shell
-    [network]
-    generateResolvConf = false
-    ```
-    - 修改etc/resolve.conf文件
-    ```conf
-    nameserver = 8.8.8.8
-    ```
+创建wsl.conf文件
+```shell
+sudo vim /etc/wsl.conf
+```
+
+- 粘贴如下代码，保存退出
+```shell
+[network]
+generateResolvConf = false
+```
+
+- 修改etc/resolve.conf文件
+```conf
+nameserver = 8.8.8.8
+```

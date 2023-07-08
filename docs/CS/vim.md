@@ -107,3 +107,27 @@ Ctrl+x+o 补全代码，需要开启文件类型检查，安装插件
 - 很复杂
 ### vimscript脚本
 一般人用不到
+
+## 插件
+### 插件管理器
+**vim-plug** 在github中下载
+在vimrc中写入：
+```
+call plug#begin()
+Plug '插件路径'
+cal plug#end()
+```
+然后source一下vimrc文件 (好像不能source?!)
+
+最后执行`PlugInstall`
+
+### 搜索插件
+网站: Vim Awesome
+
+- 修改启动界面 vim-startify
+- 状态栏美化 vim-airline
+- 增加代码缩进条线 indentline
+- 好看的主题 vim-hybrid
+
+### 文件目录树 nerdtree
+:NERDTree 开启目录树
