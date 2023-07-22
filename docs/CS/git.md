@@ -75,3 +75,12 @@ gitee
 
 gitlab
 基于局域网的代码托管中心
+
+## gitignore不起作用
+一般是新添加的规则对已经追踪的文件不起作用
+
+```sh
+git rm -r --cached .
+git add .
+git commit -m "update .gitignore"  // windows使用的命令时，需要使用双引号
+```
