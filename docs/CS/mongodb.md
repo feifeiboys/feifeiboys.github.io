@@ -41,14 +41,14 @@ db.shutdown()
 
 ## 安全认证
 ### 创建管理员账号
-```shell
-# 切换到admin库
+```js
+// 切换到admin库
 use admin
-# 创建管理员
+// 创建管理员
 db.createUser({user:"userName",pwd:"userPwd",roles:["root"]})
-# 查看所有用户信息
+// 查看所有用户信息
 show users
-# 删除用户
+// 删除用户
 db.dropUser("userName")
 ```
 
@@ -62,3 +62,7 @@ MongoDB Compass
 ```
 mongodb://用户名:shi.密码@ip地址:端口/
 ```
+
+## mongo shell
+- "show dbs" 命令可以显示所有数据的列表。
+- "use"命令，可以连接到一个指定的数据库。
