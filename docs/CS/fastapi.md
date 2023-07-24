@@ -11,6 +11,11 @@ uvicorn main:app --reload
 - --reload：让服务器在更新代码后重新启动。仅在开发时使用该选项。
 ## 部署
 
+使用的是在阿里云购买的云服务器
+
+通过gunicorn.py的配置文件来部署
+
+可以指定ssl证书（也是在阿里云上购买的免费的）
 
 ## pydantic
 > 用于python的类型提示(type hints)，指定的数据类型可以是python语言自带的，也可以是自定义的
