@@ -2,7 +2,7 @@
 
 ## 本地调试
 运行以下命令即可开启本地调试
-```
+```shell
 mkdocs serve
 ```
 ## 部署到github
