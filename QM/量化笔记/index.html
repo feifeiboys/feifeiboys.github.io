@@ -1663,14 +1663,9 @@
 
 
 <blockquote>
-<p>记录在学习《现代量子化学》中学到的知识点</p>
+<p>《Quantum Chemistry》学习笔记</p>
 </blockquote>
-<h1 id="_1">方向</h1>
-<ul>
-<li>ML力场</li>
-<li>HF降维</li>
-</ul>
-<h1 id="_2">好奇宝宝</h1>
+<h1 id="_1">好奇宝宝</h1>
 <ul>
 <li>什么是产生和湮灭算符？</li>
 <li>费米规则？反对易关系？</li>
@@ -1707,6 +1702,11 @@
 <td>能量</td>
 </tr>
 <tr>
+<td><span class="arithmatex">\(\mu\)</span></td>
+<td>\mu</td>
+<td><code>spin-orbital</code></td>
+</tr>
+<tr>
 <td><span class="arithmatex">\(\phi\)</span></td>
 <td>\phi</td>
 <td><code>SCF atomic orbital</code></td>
@@ -1727,6 +1727,11 @@
 <td></td>
 </tr>
 <tr>
+<td><span class="arithmatex">\(\theta\)</span></td>
+<td>\theta</td>
+<td><code>spatial orbital</code></td>
+</tr>
+<tr>
 <td><span class="arithmatex">\(\varphi\)</span></td>
 <td>\varphi</td>
 <td></td>
@@ -1738,13 +1743,13 @@
 </tr>
 </tbody>
 </table>
-<h1 id="_3">知名人士</h1>
+<h2 id="_2">知名人士</h2>
 <ul>
 <li><code>Roothaan</code> equations</li>
 <li><code>Pople-Nesbet</code> equations</li>
 <li><code>Koopmans</code>' theorem</li>
 </ul>
-<h1 id="notation">notation</h1>
+<h2 id="notations">notations</h2>
 <blockquote>
 <p>书中提到了很多notation，这里总结一下</p>
 </blockquote>
@@ -1755,6 +1760,20 @@ $$
 \langle mn||mn \rangle=\langle mn|mn \rangle-\langle mn|nm \rangle
 $$</li>
 </ul>
+<h2 id="operator">operator</h2>
+<p>An operator is a rule that transforms a given function into another function.</p>
+<div class="arithmatex">\[
+(\hat{A}+\hat{B})f(x)\equiv\hat{A}f(x)+\hat{B}f(x)
+\]</div>
+<div class="arithmatex">\[
+\hat{A}\hat{B}f(x)\equiv\hat{A}[\hat{B}f(x)]
+\]</div>
+<p>The operators <span class="arithmatex">\(\hat{A}\hat{B}\)</span> and <span class="arithmatex">\(\hat{B}\hat{A}\)</span> may not have the same effect.</p>
+<p>We can develop an operator algebra as follows. Two operators An and Bn are said to be equal if <span class="arithmatex">\(\hat{A}f\)</span> = <span class="arithmatex">\(\hat{A}f\)</span> for all functions <span class="arithmatex">\(f\)</span>.</p>
+<p>We define the <strong>commutator</strong>:
+$$
+[\hat{A},\hat{B}]\equiv\hat{A}\hat{B}-\hat{B}\hat{A}
+$$</p>
 <p>对易：<span class="arithmatex">\([A,B]=AB-BA=0\)</span>；
 反对易：<span class="arithmatex">\({A,B}=AB+BA\)</span></p>
 <p>产生算符<span class="arithmatex">\(a_i^+\)</span>就是在轨道中增加一个电子，行列式增加一项
@@ -1781,6 +1800,8 @@ $$
 <p>量化中的 term 基项？ levels</p>
 <p>atomic term可以分为很多level</p>
 <p>electron configuration</p>
+<p>相同自选之间才有交换积分K（<span class="arithmatex">\(\alpha\)</span>或<span class="arithmatex">\(\beta\)</span>）</p>
+<p>交换积分一般比库伦积分小的多</p>
 
 
 

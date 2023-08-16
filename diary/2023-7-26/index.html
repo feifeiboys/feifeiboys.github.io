@@ -1689,11 +1689,19 @@ $$
 $$
 \frac{x_1'-x_0'}{y_1'-y_0'}=\frac{w·H·(t-b)}{h·W·(r-l)}·\frac{x_1-x_0}{y_1-y_0}=K
 $$
-假设图片的中心坐标为<span class="arithmatex">\((x_c,y_c)\)</span>，图片的长度为L，则<span class="arithmatex">\(x_1'-x_0'=L\)</span>，<span class="arithmatex">\(y_1'-y_0'=\frac{L}{K}\)</span>，最终的到想要的参数
-<span class="arithmatex">\(<span class="arithmatex">\(x_0'=x_c-\frac{L}{2}\)</span>\)</span>
-<span class="arithmatex">\(<span class="arithmatex">\(x_1'=x_c+\frac{L}{2}\)</span>\)</span>
-<span class="arithmatex">\(<span class="arithmatex">\(y_0'=y_c-\frac{L}{2K}\)</span>\)</span>
-<span class="arithmatex">\(<span class="arithmatex">\(y_1'=y_c+\frac{L}{2K}\)</span>\)</span></p>
+假设图片的中心坐标为<span class="arithmatex">\((x_c,y_c)\)</span>，图片的长度为L，则<span class="arithmatex">\(x_1'-x_0'=L\)</span>，<span class="arithmatex">\(y_1'-y_0'=\frac{L}{K}\)</span>，最终的到想要的参数</p>
+<div class="arithmatex">\[
+x_0'=x_c-\frac{L}{2}
+\]</div>
+<div class="arithmatex">\[
+x_1'=x_c+\frac{L}{2}
+\]</div>
+<div class="arithmatex">\[
+y_0'=y_c-\frac{L}{2K}
+\]</div>
+<div class="arithmatex">\[
+y_1'=y_c+\frac{L}{2K}
+\]</div>
 <p>因此可以封装成获取extent的函数</p>
 <pre><code class="language-python">def get_extent(img,ax,L,pc):
     h,w,_=img.shape
