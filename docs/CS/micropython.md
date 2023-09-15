@@ -1,4 +1,4 @@
-# MicroPython的学习
+# MicroPython
 > 参考B站王铭东 https://doc.itprojects.cn/0006.zhishi.esp32/02.doc/index.html#/
 
 !!再为esp32安装驱动的时候开发板不要连接任何硬件

@@ -1,4 +1,4 @@
-# fortran
+# Fortran
 fortran的学习笔记
 
 - `主程序` 程序入口函数

@@ -1,4 +1,4 @@
-# blender笔记
+# blender
 > 【【合集8.21已更新93话】Blender 2.9-3.4黑铁骑士Ⅱ系统零基础入门教程(持续更新+中文字幕+普通话+不敷衍+义务教育+案例+学习)】 https://www.bilibili.com/video/BV1zh411Y7LX/?p=2&share_source=copy_web&    vd_source=12b0148a2eaf69b7ba657e5937c9e0a6
 
 > 作为一款强大的3D工具，值得花时间去学
