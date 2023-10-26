@@ -78,22 +78,16 @@ memory=3GB
 ```
 即可将wsl的占用内存限制为3GB
 
-## 换源无效问题
-- 先安装两个包 `ca-certificates` , `apt-transport-https`
-- 然后备份/etc/apt/sources.list并将内容修改为清华镜像
-- 修改DNS：
-创建wsl.conf文件
-```shell
-sudo vim /etc/wsl.conf
-```
+## 网络问题
+> wsl的网络默认情况下是和本地电脑关联的，即/etc/resolv.conf中的nameserver是自动生成的，但这样有时候会导致上不了网（具体原因不清楚），但是可以通过一下方式来避免
 
-- 粘贴如下代码，保存退出
+- 修改wsl.conf文件
 ```shell
 [network]
 generateResolvConf = false
 ```
 
-- 修改etc/resolve.conf文件
+- 修改etc/resolv.conf文件
 ```conf
 nameserver = 8.8.8.8
 ```

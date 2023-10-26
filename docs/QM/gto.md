@@ -8,7 +8,7 @@ $$
 其中：
 
 $$
-R=(x^2+y^2+z^2)
+R=x^2+y^2+z^2
 $$
 
 $c$和$\alpha$是高斯型函数的收缩系数(scale factor)和高斯指数(gaussian exponent)，不同基组下具有不同的数据，l,m,n是不同原子轨道的数据，如下表所示
